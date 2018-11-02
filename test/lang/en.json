@@ -1,0 +1,36 @@
+{
+  "home": {
+    "title": "LangJS",
+    "subheader": "<< Developed by Christian Visintin >>",
+    "subheader2": "Current Version: 1.0",
+    "documentation": {
+      "introduction": {
+        "title": "Introduction",
+        "text": "LangJS is a very simple script which allows to manage multi language web pages. It is enough to create JSONs files containing the translations and then associate each key to elements in HTML adding to them the attribute 'translate'."
+      },
+      "implementation": {
+        "title": "Implementation",
+        "text": "Implementing LangJS is pretty much simple. All you need is preparing an HTML page with all the elements with text you want to be translated with an attribute 'translate=key' where key is the path in a JSON file which contains the text associated to that element. Then, is enough to call the JavaScript function setLanguage(lang) passing the language filename. In test folder is possible to see an implementation of this. Let's see step by step how to do this:",
+        "steps": {
+          "step1": {
+            "title": "1) Create a language JSON file",
+            "desc": "We'll create the english language file 'en.json' and we'll place the file in a directory called /lang/, but can be anything, it's enough to change the language files path; to do this just set the languagePath variable to a different path."
+          },
+          "step2": {
+            "title": "2) Add translate attributes to our web page",
+            "desc": "This has to be made for all the elements which text has to be translated"
+          },
+          "step3": {
+            "title": "3) Tell our page to set the language",
+            "desc": "To do this is enough to call setLanguage() function passing a string which is the name of the JSON language file, so in this case we'll call setLanguage('en'). I obviously suggest you to set the language in the cookie and to make the page call immediately setLanguage passing the language read from cookie or a default value if not set.",
+            "conclusion": "Now everytime we want to change the only thing we'll have to do is to call setLanguage again passing another language as value."
+          }
+        }
+      }
+    }
+  },
+  "language": {
+    "english": "🇬🇧 English 🇬🇧",
+    "italian": "🇮🇹 Italian 🇮🇹"
+  }
+}

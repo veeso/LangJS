@@ -1,0 +1,36 @@
+{
+  "home": {
+    "title": "LangJS",
+    "subheader": "<< Sviluppato da Christian Visintin >>",
+    "subheader2": "Versione attuale: 1.0",
+    "documentation": {
+      "introduction": {
+        "title": "Introduzione",
+        "text": "LangJS è uno script molto semplice che ti permette di gestire le pagine web multi lingua. È sufficiente creare dei file JSON che contengono le traduzioni e associare ad ogni elemento che vogliamo tradurre nella nostra pagina, la chiave presente nel file JSON in un attributo 'translate'."
+      },
+      "implementation": {
+        "title": "Implementazione",
+        "text": "Implementare LangJS è piuttosto semplice. È sufficiente preparare una pagina HTML con tutti gli elementi che vogliamo tradurre con un attribute 'translate=nomechiavenelfileditraduzioni'. Poi, è sufficiente chiamare la funzione JavaScript setLanguage() passando il nome del file lingua come argomento. Nella cartella test è possibile vedere un'implementazione di esempio. Vediamo passo a passo come fare:",
+        "steps": {
+          "step1": {
+            "title": "1) Creare il file lingua JSON",
+            "desc": "Creeremo il file lingua per l'inglese: 'en.json'. Lo metteremo poi in /lang/, ma il percorso può essere diverso, purché si metta la variabile languagePath ad un percorso diverso."
+          },
+          "step2": {
+            "title": "2) Aggiungere gli attributi 'translate' alla nostra pagina HTML",
+            "desc": "Questo dev'essere fatto per tutti gli elementi che vogliamo tradurre"
+          },
+          "step3": {
+            "title": "3) Diamo il comando alla nostra pagina di impostare la lingua",
+            "desc": "Per fare questo è sufficiente chiamare la funzione 'setLanguage()' passando come argomento una stringa contenente il nome del file lingua, quindi ad esempio in questo caso chiameremo setLanguage('en');. Ovviamente consiglio di impostare la lingua come cookie ed ogni volta che la pagina viene caricata leggere dai cookie la lingua ed impostarla di conseguenza, oppure nel caso non sia impostato mettere una di default.",
+            "conclusion": "Adesso ogni volta che vorremo cambiare lingua sarà semplicemente necessario richiamare setLanguage() passando come argomento un'altra lingua."
+          }
+        }
+      }
+    }
+  },
+  "language": {
+    "english": "🇬🇧 Inglese 🇬🇧",
+    "italian": "🇮🇹 Italiano 🇮🇹"
+  }
+}
