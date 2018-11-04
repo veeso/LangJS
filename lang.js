@@ -22,6 +22,7 @@ SOFTWARE.
 
 var currentLanguage = null;
 var languagePath = '/lang/';
+var currentLanguageDict = null;
 
 /**
  * Load language JSON and set all element with translate attribute to the correct text
@@ -33,6 +34,8 @@ function setLanguage(lang) {
   var jsonFile = languagePath + currentLanguage + ".json";
   //Load language JSON
   $.getJSON(jsonFile, function (langData) {
+    //Set currentLanguageDict
+    currentLanguageDict = langData;
     //Iterate over all elements which has translate attribute
     $("[translate]").each(function () {
       var translationAttr = $(this).attr('translate');
@@ -55,4 +58,26 @@ function setLanguage(lang) {
       }
     });
   });
+}
+
+/**
+ * Get instant translation for a key in dictionary
+ * NOTE: setLanguage must have been called at least once for currentLanguage
+ * @param {string} dictKey
+ * @returns {string} value associated to key in dictionary, null if not found
+ */
+
+function getInstantTranslation(dictKey) {
+
+  var assocValue = currentLanguageDict;
+  var translationAttr = dictKey;
+  //Get all key parts
+  var keyPathTokens = translationAttr.split('.');
+  //For each token get next value in object path
+  keyPathTokens.forEach(key => {
+    if (assocValue !== null) {
+      assocValue = (key in assocValue) ? assocValue[key] : null;
+    }
+  });
+  return assocValue;
 }

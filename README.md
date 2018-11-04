@@ -4,13 +4,14 @@
 
 Developed by Christian Visintin
 
-Current Version 1.0
+Current Version 1.1
 
 ---
 
 ## Introduction
 
 LangJS is a very simple script which allows to manage multi language web pages. It is enough to create JSONs files containing the translations and then associate each key to elements in HTML adding to them the attribute 'translate'.
+**Lang.JS requires jQuery!**
 
 ---
 
@@ -61,7 +62,26 @@ Now everytime we want to change the only thing we'll have to do is to call setLa
 
 ---
 
+## Functions
+
+### setLanguage
+
+void *setLanguage(string lang)*
+Loads the language dictionary JSON file and update all texts in page in an element with 'translate' attribute with the value read from the dictionary.
+
+### getInstantTranslation
+
+string *getInstantTranslation(string dictKey)*
+Get instant translations for a key and returns the value associated to that key as string.
+Since it **doesn't load the JSON dictionary file** (because it it asynchronous) setLanguage must be called at least once first.
+
+---
+
 ## Changelog
+
+### Version 1.1 (04/11/2018)
+
+* Added *getInstantTranslation()* function
 
 ### Version 1.0 (02/11/2018)
 
