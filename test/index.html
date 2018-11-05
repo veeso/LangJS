@@ -10,15 +10,17 @@
     .w3-lobster {
       font-family: "Lobster", serif;
     }
+
     .codearea {
-      color: rgb(185,185,185);
-      background-color: rgb(20,25,40) !important;;
-      border: rgba(0,0,0,0);
+      color: rgb(185, 185, 185);
+      background-color: rgb(20, 25, 40) !important;
+      ;
+      border: rgba(0, 0, 0, 0);
       bottom: 0;
       font-size: 1em;
       font-family: monospace;
       width: 100%;
-  }
+    }
   </style>
 </head>
 
@@ -30,52 +32,15 @@
   <div class="w3-container">
     <p class="w3-xlarge" translate="home.subheader"></p>
     <p class="w3-large" translate="home.subheader2"></p>
-    <hr/>
+    <hr />
     <div class="w3-container">
       <button class="w3-large w3-ripple w3-xlarge w3-circle w3-indigo" translate="language.english" onclick="setLanguage('en')"></button>
-      <button class="w3-large w3-ripple w3-xlarge w3-circle w3-green" translate="language.italian"  onclick="setLanguage('it')"></button>
+      <button class="w3-large w3-ripple w3-xlarge w3-circle w3-green" translate="language.italian" onclick="setLanguage('it')"></button>
     </div>
     <hr />
     <div class="w3-container">
-      <h2 class="w3-left" translate="home.documentation.introduction.title"></h2><br/>
+      <h2 class="w3-left" translate="home.documentation.introduction.title"></h2><br />
       <p class="w3-container" translate="home.documentation.introduction.text"></p>
-    </div>
-    <hr />
-    <div class="w3-container">
-      <h2 class="w3-left" translate="home.documentation.implementation.title"></h2><br/>
-      <p class="w3-container" translate="home.documentation.implementation.text"></p>
-      <div class="w3-container">
-        <h3 translate="home.documentation.implementation.steps.step1.title"></h3>
-        <p translate="home.documentation.implementation.steps.step1.desc"></p>
-        <textarea class="codearea" readonly rows="7">
-          {
-            "home": {
-              "title": "Sample page",
-              "subheader": "This is a sample page"
-            }
-          }
-        </textarea>
-        <h3 translate="home.documentation.implementation.steps.step2.title"></h3>
-        <p translate="home.documentation.implementation.steps.step2.desc"></p>
-        <textarea class="codearea" readonly rows="7">
-            <html>
-              ...
-              <h1 translate="home.title"></h1>
-              <h2 translate="home.subheader"></h2>
-              ...
-            </html>
-        </textarea>
-        <h3 translate="home.documentation.implementation.steps.step3.title"></h3>
-        <p translate="home.documentation.implementation.steps.step3.desc"></p>
-        <textarea class="codearea" readonly rows="4">
-              ...
-              <script>setLanguage('en');</script>
-              ...
-            </html>
-        </textarea>
-        <p translate="home.documentation.implementation.steps.step3.conclusion"></p>
-      </div>
-      <hr/>
     </div>
   </div>
 

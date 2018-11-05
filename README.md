@@ -4,7 +4,7 @@
 
 Developed by Christian Visintin
 
-Current Version 1.1
+Current Version 1.2
 
 ---
 
@@ -78,6 +78,10 @@ Since it **doesn't load the JSON dictionary file** (because it it asynchronous) 
 ---
 
 ## Changelog
+
+### Version 1.2 (05/11/2018)
+
+* Code improvement
 
 ### Version 1.1 (04/11/2018)
 

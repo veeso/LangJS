@@ -39,23 +39,7 @@ function setLanguage(lang) {
     //Iterate over all elements which has translate attribute
     $("[translate]").each(function () {
       var translationAttr = $(this).attr('translate');
-      //Get all key parts
-      var keyPathTokens = translationAttr.split('.');
-      var currObjectValue = langData;
-      //For each token get next value in object path
-      keyPathTokens.forEach(key => {
-        if (currObjectValue !== null) {
-          currObjectValue = (key in currObjectValue) ? currObjectValue[key] : null;
-        }
-      });
-      //Set text to currObjectValue
-      if (currObjectValue !== null) {
-        $(this).text(currObjectValue);
-      } else {
-        console.log('Could not find', translationAttr, 'in language ', currentLanguage);
-        //Put attribute value to make the error visible
-        $(this).text(translationAttr);
-      }
+      $(this).text(getInstantTranslation(translationAttr));
     });
   });
 }
